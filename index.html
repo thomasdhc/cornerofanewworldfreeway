@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="css/horizontal.css" />
+  </head>
+  <body style="background-color:#ECEAE7">
+    <h3 style="text-align:center;font-family:Times New Roman;font-size:200%;color:#5A5A5A">CORNER OF THE NEW WORLD FREEWAY</h3>
+    <!-- horizontal scrolling  -->
+    <div id="scroll">
+      <img
+        src="img/painting1.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="Give and take, 48in x 36in, Acrylic on Canvas, 2022"
+        />
+      <img
+        src="img/painting2.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="Baby keep me closely, 36in x 48in, Acrylic on Canvas, 2022"
+      />
+      <img
+        src="img/painting3.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="I'm in the dark, 48in x 48in, Acrylic on Canvas, 2022"
+      />
+      <img
+        src="img/painting4.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="Spectator, 48in x 36in, Acrylic on Canvas, 2022"
+      />
+      <img
+        src="img/painting5.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="Prayer, 36in x 48 in, Acrylic on Canvas, 2022"
+        />
+      <img
+        src="img/painting6.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="Cater to you, 36in x 48in, Acrylic on Canvas, 2022"
+        />
+      <img
+        src="img/painting7.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="Matha, 36in x 48in, Acrylic on Canvas, 2022"
+        />
+      <img
+        src="img/painting8.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="Study on modern anatomy, Acrylic on Canvas, 2021"
+        />
+    </div>
+
+    <!-- Exit text-->
+    <div id="intro">
+      <p id="ctext"> Dong Hyuk Chang </p>
+      <p id="ctext"> thomaschang26@tutanota.com </p>
+      <p id="ctext"> Instagram: <a href="https://www.instagram.com/otidhc/">@otidhc</a></p>
+    </div>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+      <div class="w3-modal-content w3-animate-opacity w3-center w3-transparent "
+      >
+        <img id="img01" class="w3-image" />
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction();
+      };
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          navbar.className =
+            "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(
+            " w3-card w3-animate-top w3-white",
+            ""
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
